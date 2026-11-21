@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Organiser Dashboard";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Organiser Dashboard</h1>
+        <h4 class="text-muted">Welcome, @Context.Session.GetString("UserName")</h4>
+    </div>
+
+    <div class="alert alert-success">
+        <strong>Success!</strong> You are logged in as an Organiser and have access to this page.
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">My Events</div>
+                <div class="card-body">
+                    <h5 class="card-title">Manage Events</h5>
+                    <p class="card-text">Create, edit, and delete your road events.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-header">Enrolments</div>
+                <div class="card-body">
+                    <h5 class="card-title">View Participants</h5>
+                    <p class="card-text">See who has registered for your events.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-info mb-3">
+                <div class="card-header">Results</div>
+                <div class="card-body">
+                    <h5 class="card-title">Capture Results</h5>
+                    <p class="card-text">Enter finishing times and positions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Participant Home";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Participant Home</h1>
+        <h4 class="text-muted">Welcome, @Context.Session.GetString("UserName")</h4>
+    </div>
+
+    <div class="alert alert-info">
+        <strong>Success!</strong> You are logged in as a Participant and have access to this page.
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-header">Upcoming Events</div>
+                <div class="card-body">
+                    <h5 class="card-title">Browse & Enrol</h5>
+                    <p class="card-text">Find your next race and register to participate.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">My Performance</div>
+                <div class="card-body">
+                    <h5 class="card-title">My Results</h5>
+                    <p class="card-text">Track your past events, finishing times, and positions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
