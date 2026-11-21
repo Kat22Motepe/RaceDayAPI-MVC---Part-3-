@@ -24,8 +24,6 @@ A complete video walkthrough demonstrating the application's functionality, code
 
 YouTube Video: [INSERT YOUR UNLISTED YOUTUBE LINK HERE]
 
- AI Disclosure
+AI Disclosure
 
-AI tools (Gemini) were used during the development of this project for architectural guidance, troubleshooting, and boilerplate code generation. The full transcript of the AI interactions can be found at the following link:
-
-**AI Chat Transcript:** [INSERT LINK TO THIS CHAT OR YOUR AI TRANSCRIPT HERE]
+AI tools (Gemini) were used during the development of this project for architectural guidance, troubleshooting, and inital code assistance. 
