@@ -1,0 +1,55 @@
+﻿@model List<RaceDay.MVC.ViewModels.ResultEntryViewModel>
+@{
+    ViewData["Title"] = "Enter Results";
+    int eventId = ViewBag.EventId;
+}
+
+<div class="container mt-4">
+    <h2>Enter Results</h2>
+    <hr />
+
+    <form asp-action="Capture" method="post">
+        <input type="hidden" name="eventId" value="@eventId" />
+        
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Participant</th>
+                    <th>Category</th>
+                    <th style="width: 200px;">Finish Time (HH:mm:ss)</th>
+                    <th style="width: 150px;">Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <td class="align-middle">
+                            @Model[i].ParticipantName
+                            <input type="hidden" asp-for="@Model[i].EnrolmentId" />
+                            <input type="hidden" asp-for="@Model[i].ParticipantName" />
+                            <input type="hidden" asp-for="@Model[i].CategoryName" />
+                        </td>
+                        <td class="align-middle">@Model[i].CategoryName</td>
+                        <td>
+                            <input asp-for="@Model[i].FinishTime" class="form-control" placeholder="e.g. 02:15:30" />
+                        </td>
+                        <td>
+                            <input asp-for="@Model[i].Position" class="form-control" type="number" placeholder="e.g. 1" />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        @if (Model.Any())
+        {
+            <button type="submit" class="btn btn-success">Save All Results</button>
+        }
+        else
+        {
+            <div class="alert alert-warning">No participants have enrolled in this event yet.</div>
+        }
+        <a asp-action="Index" class="btn btn-secondary">Back to Events</a>
+    </form>
+</div>
