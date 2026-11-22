@@ -8,13 +8,6 @@ One of the key features of Part 3 is the integration of Azure Blob Storage (usin
 
 To run this project locally, you must first ensure that the Azurite storage emulator is running. You can start Azurite via the command line by running `azurite`, or by locating and running the `azurite.exe` executable installed with Visual Studio 2022. Once Azurite is running, open the `RaceDay.sln` solution in Visual Studio. Because the MVC application depends on the API, you must start the API project first. Right-click the `RaceDay.API` project and select **Debug > Start New Instance**. Once the Swagger interface loads in your browser, right-click the `RaceDay.MVC` project and select **Debug > Start New Instance**. You can then register a new account as an Organiser or Participant and log in to explore the system.
 
-To run the application using Docker, you can use the provided `docker-compose.yml` file. Open a terminal in the root directory of the solution and run the following command:
-
-```bash
-docker-compose up --build
-```
-
-This will build the Docker images for both the API and the MVC application and start the containers. You can access the MVC front-end by navigating to `http://localhost:8080` in your browser. The API will be available at `http://localhost:8080` (or the port specified in your compose file).
 
  CI/CD and Video Demonstration
 
@@ -22,8 +15,8 @@ The project is fully integrated with GitHub Actions. The CI/CD pipeline is confi
 
 A complete video walkthrough demonstrating the application's functionality, code structure, Azurite image uploads, and Docker container execution can be viewed at the following unlisted YouTube link:
 
-YouTube Video: [INSERT YOUR UNLISTED YOUTUBE LINK HERE]
+YouTube Video: https://youtu.be/62arGlTHO30?si=dpgPKqL6ZKdKiN3-
 
 AI Disclosure
 
-AI tools (Gemini) were used during the development of this project for architectural guidance, troubleshooting, and inital code assistance. 
+AI tools (ChatGPT) were used during the early development of this project for architectural guidance, troubleshooting, and inital code assistance. 
